@@ -1,13 +1,14 @@
 import React from 'react';
-import { LogoLink } from '../components/logo/LogoLink';
-import { Content } from '../components/content/Content';
+import { LogoLink } from 'components/logo/LogoLink';
+import { Content } from 'components/content/Content';
 import { Hidden } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import DisplacementSphere from '../components/background/DisplacementSphere';
-import { ThemeToggle } from '../components/theme/ThemeToggle';
-import { FooterText } from '../components/footer/FooterText';
-import { SocialIcons } from '../components/content/SocialIcons';
-import { SpeedDials } from '../components/speedDial/SpeedDial';
+import DisplacementSphere from 'components/background/DisplacementSphere';
+import { ThemeToggle } from 'components/theme/ThemeToggle';
+import { FooterText } from 'components/footer/FooterText';
+import { SocialIcons } from 'components/content/SocialIcons';
+import { SpeedDials } from 'components/speedDial/SpeedDial';
+import Projects from 'pages/Projects.js';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -34,6 +35,9 @@ export const Home = () => {
           <SpeedDials />
         </Hidden>
         <FooterText />
+      </div>
+      <div className={classes.root}>
+        <Projects />
       </div>
     </>
   );
