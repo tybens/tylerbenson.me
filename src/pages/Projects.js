@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Card from "components/projects/Card";
 import Resume from "settings/resume.json";
+import { Typography } from '@material-ui/core';
 
 const Page = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const Page = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   min-height: -webkit-fill-available; /* mobile viewport bug fix */
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -41,7 +42,10 @@ const Grid = styled.div`
 `;
 
 export default function App() {
-  return (
+  return (<>
+      <Typography variant="h4" align="center">
+        Projects
+      </Typography>
     <Page>
       <Grid>
         {Resume.basics.projects.map((website, index) => (
@@ -55,5 +59,6 @@ export default function App() {
         ))}
       </Grid>
     </Page>
+    </>
   );
 }

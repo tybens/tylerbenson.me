@@ -10,18 +10,12 @@ const useStyles = makeStyles((theme) => ({
         right: theme.spacing(6),
     },
 
-    speedDialPages: {
-        position: "absolute",
-        bottom: theme.spacing(6),
-        left: theme.spacing(6)
-    },
-
     iconColor: {
         color: theme.palette.foreground.default,
     },
 }));
 
-export const SpeedDials = ({ socials = true}) => {
+export const SpeedDials = () => {
     const classes = useStyles();
 
     const [open, setOpen] = React.useState(false);
@@ -49,34 +43,19 @@ export const SpeedDials = ({ socials = true}) => {
         />
     ));
 
-    const actionIconsPages = Resume.basics.pages.map((action) => (
-        <SpeedDialAction
-            key={action.page.toLowerCase()}
-            icon={<i className={`${action.x_icon} ${classes.iconColor}`}></i>}
-            tooltipTitle={action.page}
-            onClick={handleClose}
-            href={action.url}
-            sx={{align: "center"}}
-            target="_blank"
-            rel="noopener noreferrer"
-            underline="none"
-            color="inherit"
-        />
-    ));
-
     return (
         <>
             <SpeedDial
                 ariaLabel="SpeedDial"
-                className={socials ? classes.speedDial : classes.speedDialPages}
+                className={classes.speedDial}
                 hidden={false}
                 icon={<SpeedDialIcon />}
                 onClose={handleClose}
                 onOpen={handleOpen}
                 open={open}
-                direction={socials ? "down" : "right"}
+                direction={"down"}
             >
-                {socials ? actionIconsSocials : actionIconsPages}
+                {actionIconsSocials}
             </SpeedDial>
         </>
     );

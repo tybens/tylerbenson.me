@@ -1,5 +1,5 @@
 .displacement-sphere {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     top: 0;
     right: 0;
