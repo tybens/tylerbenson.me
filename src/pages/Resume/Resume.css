@@ -1,7 +1,12 @@
+.back-button {
+  position: absolute;
+  top: 47px;
+  left: 47px;
+  z-index: 100;
+}
 #portfolio {
     position: relative;
     background-color: white;
-    top: -100px;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio {
@@ -18,8 +23,10 @@
   }
   #portfolio h2 {
     color: #4f4f4f;
-    margin: 0;
-    margin-bottom: 50px;
+    margin: 0px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio h2 {
@@ -35,16 +42,16 @@
     }
   }
   #portfolio .rc-slider .rc-slider-track {
-    background-color: #fff;
+    background-color: #4aaeae;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .rc-slider .rc-slider-track {
-      background-color: #fff;
+      background-color: #e6e6e6;
     }
   }
   #portfolio .rc-slider .rc-slider-handle,
   #portfolio .rc-slider .rc-slider-dot-active {
-    border-color: #fff;
+    border-color: #44a3a3;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .rc-slider .rc-slider-handle,
@@ -54,7 +61,7 @@
   }
   #portfolio .rc-slider .rc-slider-handle:active,
   #portfolio .rc-slider .rc-slider-dot-active:active {
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px black;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .rc-slider .rc-slider-handle:active,
@@ -67,7 +74,7 @@
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .rc-slider .rc-slider-rail {
-      background-color: dimgray;
+      background-color: rgb(72, 72, 72);
     }
   }
   #portfolio .portfolio-box {
@@ -84,7 +91,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2em;
-    color: #fff;
+    color: #4f4f4f;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .portfolio-box h1 {
@@ -106,7 +113,7 @@
     font-size: 1.2em;
   }
   #portfolio .portfolio-box .header .title {
-    color: #b3b3b3;
+    color: #5a5a5a;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -116,7 +123,7 @@
     }
   }
   #portfolio .portfolio-box .header .desc {
-    color: #b3b3b3;
+    color: #5a5a5a;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .portfolio-box .header .desc {
@@ -124,9 +131,8 @@
     }
   }
   #portfolio .portfolio-box .header .date {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
+    font-style: italic;
+    color: #5c5c5c;
   }
   @media (prefers-color-scheme: dark) {
     #portfolio .portfolio-box .header .date {
@@ -137,7 +143,7 @@
     color: #cfcfcf;
   }
   #portfolio .portfolio-box .divider-strong {
-    color: #fff;
+    color: #5a5a5a;
     font-weight: bold;
   }
   #portfolio .points-enter {
@@ -145,7 +151,7 @@
   }
   #portfolio .points-enter.points-enter-active {
     opacity: 1;
-    color: #fff;
+    color: #4aaeae;
     transition: all 500ms ease;
   }
   #portfolio .points-exit {
@@ -153,7 +159,7 @@
   }
   #portfolio .points-exit-active {
     opacity: 0.01;
-    color: #fff;
+    color: #5a5a5a;
     transition: all 500ms ease;
     text-decoration: line-through;
   }
@@ -162,5 +168,6 @@
   }
   #portfolio .points-appear.points-appear-active {
     opacity: 1;
+    color: #4aaeae;
     transition: all 0.5s ease;
   }
