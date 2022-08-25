@@ -171,3 +171,13 @@
     color: #4aaeae;
     transition: all 0.5s ease;
   }
+
+  #portfolio .link {
+    color: white;
+    transition: all 500ms ease;
+    text-decoration: none;
+  }
+  #portfolio .link:hover {
+    transform: scale(1.05);
+    color: #4aaeae;
+  }

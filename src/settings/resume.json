@@ -6,7 +6,7 @@
     "phone": "(XXX) XXX-XXXX",
     "picture": "jl.png",
     "x_title": "Hey, I'm",
-    "job": "Data Scientist at IBM",
+    "job": "student at Princeton University",
     "description": "Hey, I'm Tyler Benson, a Computer Science student at Princeton passionate about data and AI. Talk soon!",
     "summary": "based in San Diego, California.",
     "keywords": "personal,website,portfolio,template,kit,tybens,tyler,benson,ty,bens,computer,science,bremen,germany,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
@@ -23,7 +23,7 @@
       {
         "network": "Google",
         "username": "tylersmilerb@gmail.com",
-        "url": "mailto:tylersmilerb@gmail.com.com",
+        "url": "mailto:tylersmilerb@gmail.com",
         "x_icon": "fa fa-envelope"
       },
       {
@@ -56,26 +56,26 @@
     "projects": [
       {
         "hexa": "#1D1148",
-        "title": "Swile",
-        "description": "https://www.swile.co/",
+        "title": "Habitat Sartorial",
+        "description": "https://www.habitatsartorial.org/",
         "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613408078/codesandbox/swile_x8mcnc.png"
       },
       {
         "hexa": "#FFCD00",
-        "title": "Typeform",
-        "description": "https://www.welcometothejungle.com/fr/",
+        "title": "Chandlers Fav Album",
+        "description": "https://www.chandlersfavoritealbum.com/",
         "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613409201/codesandbox/typeform_vqqkob.png"
       },
       {
         "hexa": "#FF5041",
-        "title": "Smiirl",
-        "description": "https://www.smiirl.com/",
+        "title": "Lonely Raids",
+        "description": "https://www.lonelyraids.com/",
         "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613409498/codesandbox/smiirl_qkuncq.png"
       },
       {
         "hexa": "#000000",
-        "title": "FoodChéri",
-        "description": "https://www.foodcheri.com/",
+        "title": "Teagan Lamp",
+        "description": "https://www.teaganlamp.com/",
         "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613410954/codesandbox/foodcheri_htkx8f.png"
       },
       {
@@ -89,100 +89,147 @@
   "resume": {
     "experience": [
       {
-        "thing": "Matriculate",
-        "description": "Advising Fellow",
-        "date": "Mar 2022 - Present",
+        "thing": "IBM",
+        "description": "Data Scientist",
+        "date": "May - August 2022",
         "toggle": [1, 2, 3, 4, 5],
         "points": [
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Advised low-income, high-achieving high school juniors and seniors through the college admissions process"
+            "content": "Worked closely with large businesses to use IBM technology to solve their specific needs."
+          },
+
+          {
+            "toggle": [1, 2, 3, 4, 5],
+            "content": "Designed, built, and demoed an AI Customer Service Assistant to pitch to a large energy provider."
+          },
+          {
+            "toggle": [4, 5],
+            "content": "Applied machine learning such as projected bill pricing, customer tone analysis, and predicted lengths of current power outages"
           }
         ]
       },
       {
-        "thing": "Self-Employed",
-        "description": "Tutor",
-        "date": "Aug 2018 - Present",
+        "thing": "Curbside Health, Inc",
+        "description": "Data Scientist / Web Developer",
+        "date": "Sep 2020 - Present",
         "toggle": [1, 2, 3, 4, 5],
         "points": [
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Tutored STEM and SAT prep for students in 8th through 12th grade."
+            "content": "Worked full-time during my gap year from Princeton 2020-21. Now at 10 hours a week, I garner insights from product usage data."
           },
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Prepared personalized lessons based on students’ needs."
+            "content": "Created a machine learning model which is now being used 400+ times a day by four major hospitals to inform physicians of a patients likelihood of admission to the ICU from early triage data"
           },
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Relied on references and being diligent to seek out new clients."
+            "content": "Built the public-facing website at curbsidehealth.com"
           }
         ]
       },
       {
-        "thing": "Keiki Kaukau",
-        "description": "Business Intern",
-        "date": "May - Aug 2021",
+        "thing": "Habitat Sartorial",
+        "description": "Head of Engineering",
+        "date": "April 2021 - Present",
         "toggle": [1, 2, 3, 4, 5],
         "points": [
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Packed and delivered online and wholesale orders."
+            "content": "Designed, built, and deployed the fully-functioning, modern commerce website (link) to house our philosophy, showcase donors, and allow for zero-pain-point ordering of our fashion."
           },
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Created social media content for an audience of over 11,000"
+            "content": "Applied SEO and HCI analytics across seven social media channels to drive growth and customer/donor communication"
           },
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Helped organize events and sales of $10,000+ of merchandise."
+            "content": "Now at ~5 hours a week, I update the website with new content and continue my analytical web development."
           }
         ]
       },
       {
-        "thing": "Tex808",
-        "description": "Hostess/Food Runner",
-        "date": "Jun 2020 - Jan 2021",
+        "thing": "Client Relations Intern",
+        "description": "ca2L Lighting Projects (Barcelona, Spain)",
+        "date": "May - July 2021",
+        "toggle": [2, 3, 4, 5],
+        "points": [
+          {
+            "toggle": [2, 3, 4, 5],
+            "content": "Set up multiple web scraping scripts to automate searching for potential clients in France, Spain and Portugal"
+          },
+          {
+            "toggle": [2, 3, 4, 5],
+            "content": "Seeded our database with 1500+ clients to reach out to"
+          }
+        ]
+      }, 
+      {
+        "thing": "Research Assistant",
+        "description": "Troyanskaya Laboratory (Princeton)",
+        "date": "May - August 2020",
         "toggle": [3, 4, 5],
         "points": [
           {
-            "toggle": [4, 5],
-            "content": "Greeted and sat all guests following COVID-19 guidelines at the time."
-          },
-          {
-            "toggle": [4, 5],
-            "content": "Communicated with other restaurant staff to ensure a good dining experience."
-          },
-          {
             "toggle": [3, 4, 5],
-            "content": "Brought food to customers’ tables, bussed, and cleaned tables between each party."
+            "content": "Developed SeqSpawner, an object-oriented Python library for simulating biological sequences."
+          },
+          {
+            "toggle": [4, 5],
+            "content": "Studied Bayesian statistical models to generate the simulatory testing suite."
+          }
+        ]
+      },
+
+      {
+        "thing": "Research Assistant",
+        "description": "University College Dublin (Dublin, Ireland)",
+        "date": "June - July 2018",
+        "toggle": [4, 5],
+        "points": [
+          {
+            "toggle": [4, 5],
+            "content": "Developed a urine test for Preeclampsia through analysis of large data sets of protein concentrations."
+          },
+          {
+            "toggle": [5],
+            "content": "Expanded and applied my knowledge of Python to make a tangible impact. :P."
+          },
+          {
+            "toggle": [5],
+            "content": "This was the first time I ever coded anything. Tyler's first steps."
           }
         ]
       }
     ],
     "awards": [
       {
-        "thing": "Rugby",
-        "description": "Academic All-Ivy Fall 2021",
-        "date": "Dec 2021",
-        "toggle": [2, 3, 4, 5],
-        "points": [
-          {
-            "toggle": [2, 3, 4, 5],
-            "content": "3.7+ GPA and played in at least two A-side matches in the Fall 2021 season."
-          }
-        ]
-      },
-      {
-        "thing": "Rugby",
-        "description": "PUWRFC Defensive Player of the Season",
-        "date": "Jan 2022",
+        "thing": "Mr. Zionsville",
+        "description": "Mr. Zionsville 2019",
+        "date": "Jan 2019",
         "toggle": [4, 5],
         "points": [
           {
+            "toggle": [4, 5],
+            "content": "I was awarded Mr. Zionsville after performing Thunderstruck on the Double Bass and singing Never Gonna Give You Up by Rick Astley."
+          },
+          {
             "toggle": [5],
-            "content": "Yes I <3 rugby"
+            "content": "Mr. Z is a male beauty pageant to raise money for Prom"
+          }
+        ]
+      },
+
+      {
+        "thing": "Finalist for Ethics Bowl Tournament",
+        "description": "Ethics Bowl at Ball State",
+        "date": "2019",
+        "toggle": [5],
+        "points": [
+          {
+            "toggle": [5],
+            "content": "My friends and I wanted to see how well we would do with 0 preparation."
           }
         ]
       }
@@ -190,36 +237,62 @@
 
     "hobbies": [
       {
-        "thing": "Rugby",
-        "description": "President of PUWRFC",
-        "date": "2021- Present",
+        "thing": "Double Bass",
+        "description": "I grew up playing classical upright bass",
+        "date": "2013 - Present",
         "toggle": [1, 2, 3, 4, 5],
         "points": [
           {
             "toggle": [2, 3, 4, 5],
-            "content": "Lots of team management and overseeing other positions."
+            "content": "Princeton University Orchestra 2019 - 2021"
           },
-
+          {
+            "toggle": [3, 4, 5],
+            "content": "Was selected as Interlochen soloist winner 2015 and 2016 among 20 high achieving Double Bass players."
+          },
           {
             "toggle": [2, 3, 4, 5],
-            "content": "I play lock and flanker in 15s and prop in 7s :)"
+            "content": "Principal Bassist of the Indianapolis Youth Orchestra 2015 - 2019"
+          }, 
+          {
+            "toggle": [4, 5],
+            "content": "Principal Bassist of the competitive Side-by-Side program 2019"
           }
         ]
       },
       {
-        "thing": "Surfing",
-        "description": "Only when I'm home",
+        "thing": "Singing",
+        "description": "I like to sing",
         "date": "Childhood - Present",
-        "toggle": [1, 2, 3, 4, 5],
+        "toggle": [3, 4, 5],
         "points": [
           {
             "toggle": [4, 5],
-            "content": "I am not good."
+            "content": "Princeton's Shere Khan acapella group 2019 - 2021"
+          },
+          {
+            "toggle": [4, 5],
+            "content": "Member of Zionsville Community High School's competitive show choir, Royalaires"
+          },
+          {
+            "toggle": [3, 4, 5],
+            "content": "I sing bass :)"
+          }
+        ]
+      },
+      {
+        "thing": "Climbing",
+        "description": "I am rly into it recently",
+        "date": "2021 - Present",
+        "toggle": [4, 5],
+        "points": [
+          {
+            "toggle": [4, 5],
+            "content": "Member of the Princeton University Climbing Team"
           }
         ]
       }
-    ],
-    "projects": []
+    ]
   },
 
   "work": [

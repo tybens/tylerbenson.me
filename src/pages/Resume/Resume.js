@@ -4,7 +4,7 @@ import { IconButton } from "@mui/material";
 import Slider from "rc-slider";
 import { Grid } from "@material-ui/core";
 import { CSSTransition } from "react-transition-group";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "rc-slider/assets/index.css";
 import "./Resume.css";
 import resumeData from "settings/resume.json";
@@ -55,12 +55,12 @@ const Resume = ({ history }) => {
                 title="Hobbies"
                 slider={slider}
               />
-              {/* <PortfolioSection
-                  data={data.projects}
-                  title="Projects"
-                  slider={slider}
-                /> */}
-              {slider > 2 && (
+              <PortfolioSection
+                data={data.projects}
+                title="Projects"
+                slider={slider}
+              />
+              {slider > 3 && (
                 <PortfolioSection
                   data={data.awards}
                   title="Awards"
@@ -79,47 +79,62 @@ const PortfolioSection = ({ data, title, slider }) => {
   return (
     <div className="portfolio-section">
       <h1>{title}</h1>
-      {data.map((item, id) => {
-        let showItem = item.toggle.indexOf(slider) !== -1;
-        const points = item.points.map((p, id) => {
-          let showPoint = p.toggle.indexOf(slider) !== -1;
+      {title === "Projects" ? (
+        <CSSTransition
+          classNames="points"
+          appear
+          in
+          unmountOnExit
+          mountOnEnter
+          timeout={{ enter: 1500, exit: 300 }}
+        >
+          <Link to="/projects" className="link">
+            Click here to view projects page
+          </Link>
+        </CSSTransition>
+      ) : (
+        data.map((item, id) => {
+          let showItem = item.toggle.indexOf(slider) !== -1;
+          const points = item.points.map((p, id) => {
+            let showPoint = p.toggle.indexOf(slider) !== -1;
+            return (
+              <CSSTransition
+                key={`${id}+${p.content}`}
+                classNames="points"
+                appear
+                in={showPoint}
+                unmountOnExit
+                mountOnEnter
+                timeout={{ enter: 1500, exit: 300 }}
+              >
+                <li dangerouslySetInnerHTML={{ __html: p.content }} />
+              </CSSTransition>
+            );
+          });
           return (
             <CSSTransition
-              key={`${id}+${p.content}`}
+              key={`${id}`}
               classNames="points"
               appear
-              in={showPoint}
+              in={showItem}
               unmountOnExit
               mountOnEnter
-              timeout={{ enter: 1500, exit: 300 }}
+              timeout={{ enter: 1500, exit: 500 }}
             >
-              <li dangerouslySetInnerHTML={{ __html: p.content }} />
+              <div className="portfolio-item">
+                <div className="header">
+                  <span className="title">{item.thing}</span>
+                  <span className="divider-strong"> || </span>
+                  <span className="desc">{item.description}</span>
+                  <span className="divider-weak"> || </span>
+                  <span className="date"> {item.date}</span>
+                </div>
+                <ul>{points}</ul>
+              </div>
             </CSSTransition>
           );
-        });
-        return (
-          <CSSTransition
-            key={`${id}`}
-            classNames="points"
-            appear
-            in={showItem}
-            unmountOnExit
-            mountOnEnter
-            timeout={{ enter: 1500, exit: 500 }}
-          >
-            <div className="portfolio-item">
-              <div className="header">
-                <span className="title">{item.thing}</span>
-                <span className="divider-strong"> || </span>
-                <span className="desc">{item.description}</span>
-                <span className="divider-weak"> || </span>
-                <span className="date"> {item.date}</span>
-              </div>
-              <ul>{points}</ul>
-            </div>
-          </CSSTransition>
-        );
-      })}
+        })
+      )}
     </div>
   );
 };
