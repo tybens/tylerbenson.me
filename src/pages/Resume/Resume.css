@@ -78,7 +78,7 @@
     }
   } */
   #portfolio .portfolio-box {
-    padding: 5% 10%;
+    padding: 10% 10%;
     color: #5c5c5c;
   }
   /* @media (prefers-color-scheme: dark) {
@@ -173,7 +173,7 @@
   }
 
   #portfolio .link {
-    color: white;
+    color: #5c5c5c;
     transition: all 500ms ease;
     text-decoration: none;
   }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { IconButton } from "@mui/material";
 import Slider from "rc-slider";
-import { Grid } from "@material-ui/core";
+import { Grid, Tooltip, Zoom } from "@material-ui/core";
 import { CSSTransition } from "react-transition-group";
 import { Link, withRouter } from "react-router-dom";
 import "rc-slider/assets/index.css";
@@ -18,9 +18,12 @@ const Resume = ({ history }) => {
 
   return (
     <main>
-      <IconButton style={{position: "absolute"}} size="large" className="back-button" onClick={handleBackClick}>
+
+    <Tooltip title={"Back"} placement="right" TransitionComponent={Zoom}>
+      <IconButton style={{position: "absolute", top: 10, left: 10}} size="large" className="back-button" onClick={handleBackClick}>
         <ArrowBackIcon />
       </IconButton>
+      </Tooltip>
       <section id="portfolio">
         <h2 className="section-heading">some things about me</h2>
         <center>
@@ -32,8 +35,8 @@ const Resume = ({ history }) => {
             marks={{
               1: "Less things",
               2: "Default",
-              3: "More things",
-              4: "Lots of things",
+              3: "More info",
+              4: "Lots of info",
               5: "EVERYTHING",
             }}
             dots
