@@ -10,7 +10,7 @@
     "description": "Hey, I'm Tyler Benson, a Computer Science student at Princeton passionate about data and AI. Talk soon!",
     "summary": "based in San Diego, California.",
     "keywords": "personal,website,portfolio,template,kit,tybens,tyler,benson,ty,bens,computer,science,bremen,germany,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
-    "url": "https://tylerbenson.com",
+    "url": "https://tylerbenson.me",
     "location": {
       "address": "XX XXXXXstreet",
       "postalCode": "XXXXX",
@@ -137,7 +137,7 @@
         "points": [
           {
             "toggle": [1, 2, 3, 4, 5],
-            "content": "Designed, built, and deployed the fully-functioning, modern commerce website (link) to house our philosophy, showcase donors, and allow for zero-pain-point ordering of our fashion."
+            "content": "Designed, built, and deployed the fully-functioning, modern commerce website to house our philosophy, showcase donors, and allow for zero-pain-point ordering of our fashion."
           },
           {
             "toggle": [1, 2, 3, 4, 5],
