@@ -18,7 +18,7 @@ const Resume = ({ history }) => {
 
   return (
     <main>
-      <IconButton className="back-button" onClick={handleBackClick}>
+      <IconButton style={{position: "absolute"}} size="large" className="back-button" onClick={handleBackClick}>
         <ArrowBackIcon />
       </IconButton>
       <section id="portfolio">
