@@ -10,7 +10,6 @@ const Screenshot = styled.figure`
   position: relative;
   margin: 0;
   padding: 0;
-  width: ${cardWidth}px;
   height: 200px;
   background: url(${(props) => props.image}) 0 0 no-repeat;
   background-size: cover;
@@ -108,8 +107,8 @@ const Style = styled.button`
   }
 `;
 
-const Card = ({ hexa, title, description, image }) => (
-  <Style>
+const Card = ({ hexa, title, description, image, onClick }) => (
+  <Style onClick={onClick}>
     <Screenshot image={image} />
     <Content>
       <Title>{title}</Title>

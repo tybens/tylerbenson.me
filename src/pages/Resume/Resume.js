@@ -18,11 +18,15 @@ const Resume = ({ history }) => {
 
   return (
     <main>
-
-    <Tooltip title={"Back"} placement="right" TransitionComponent={Zoom}>
-      <IconButton style={{position: "absolute", top: 10, left: 10}} size="large" className="back-button" onClick={handleBackClick}>
-        <ArrowBackIcon />
-      </IconButton>
+      <Tooltip title={"Back"} placement="right" TransitionComponent={Zoom}>
+        <IconButton
+          style={{ position: "absolute", top: 10, left: 10 }}
+          size="large"
+          className="back-button"
+          onClick={handleBackClick}
+        >
+          <ArrowBackIcon />
+        </IconButton>
       </Tooltip>
       <section id="portfolio">
         <h2 className="section-heading">some things about me</h2>

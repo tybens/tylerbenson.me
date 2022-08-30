@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@material-ui/lab";
 import Resume from "../../settings/resume.json";
+import { Tooltip, Zoom } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     speedDial: {
@@ -43,11 +44,11 @@ export const SpeedDials = () => {
         />
     ));
 
+
     return (
-        <>
+        <Tooltip title={"Actions"} placement="" TransitionComponent={Zoom} className={classes.speedDial}>
             <SpeedDial
                 ariaLabel="SpeedDial"
-                className={classes.speedDial}
                 hidden={false}
                 icon={<SpeedDialIcon />}
                 onClose={handleClose}
@@ -57,6 +58,6 @@ export const SpeedDials = () => {
             >
                 {actionIconsSocials}
             </SpeedDial>
-        </>
+        </Tooltip>
     );
 };

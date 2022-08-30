@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    overflowX: "hidden"
+    overflowX: "hidden",
   },
 }));
 
@@ -28,12 +28,13 @@ const Home = () => {
       <Content />
       <ThemeToggle />
       <Hidden smDown>
+        <FooterText hidden={true} />
         <SocialIcons />
       </Hidden>
       <Hidden mdUp>
+        <FooterText hidden={false} />
         <SpeedDials />
       </Hidden>
-      <FooterText />
     </div>
   );
 };

@@ -58,31 +58,31 @@
         "hexa": "#1D1148",
         "title": "Habitat Sartorial",
         "description": "https://www.habitatsartorial.org/",
-        "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613408078/codesandbox/swile_x8mcnc.png"
+        "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/habitatsartorial_tvzafl.png"
       },
       {
         "hexa": "#FFCD00",
         "title": "Chandlers Fav Album",
         "description": "https://www.chandlersfavoritealbum.com/",
-        "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613409201/codesandbox/typeform_vqqkob.png"
+        "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/chandlersfavalbum_ki75jc.png"
       },
       {
         "hexa": "#FF5041",
         "title": "Lonely Raids",
-        "description": "https://www.lonelyraids.com/",
-        "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613409498/codesandbox/smiirl_qkuncq.png"
+        "description": "https://lonelyraids.com/",
+        "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/lonelyraids_g5twam.png"
       },
       {
         "hexa": "#000000",
         "title": "Teagan Lamp",
-        "description": "https://www.teaganlamp.com/",
-        "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613410954/codesandbox/foodcheri_htkx8f.png"
+        "description": "https://teaganlamp.com/",
+        "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/teaganlamp_ihdgos.png"
       },
       {
         "hexa": "#FFCD00",
-        "title": "Welcome to the jungle",
-        "description": "https://www.welcometothejungle.com/fr/",
-        "image": "https://res.cloudinary.com/vinzcelavi/image/upload/w_320,dpr_2.0/v1613408481/codesandbox/welcome-to-the-jungle_nemlnt.png"
+        "title": "Leilanibender.com",
+        "description": "https://www.leilanibender.com/",
+        "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png"
       }
     ]
   },
@@ -150,8 +150,8 @@
         ]
       },
       {
-        "thing": "Client Relations Intern",
-        "description": "ca2L Lighting Projects (Barcelona, Spain)",
+        "thing": "ca2L Lighting Projects (Barcelona, Spain)",
+        "description": "Client Relations Intern",
         "date": "May - July 2021",
         "toggle": [2, 3, 4, 5],
         "points": [
@@ -166,8 +166,8 @@
         ]
       }, 
       {
-        "thing": "Research Assistant",
-        "description": "Troyanskaya Laboratory (Princeton)",
+        "thing": "Troyanskaya Laboratory (Princeton)",
+        "description": "Research Assistant",
         "date": "May - August 2020",
         "toggle": [3, 4, 5],
         "points": [
@@ -183,8 +183,8 @@
       },
 
       {
-        "thing": "Research Assistant",
-        "description": "University College Dublin (Dublin, Ireland)",
+        "thing": "University College Dublin (Dublin, Ireland)",
+        "description": "Research Assistant",
         "date": "June - July 2018",
         "toggle": [4, 5],
         "points": [

@@ -1,36 +1,107 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link, Tooltip, Zoom, Button } from "@material-ui/core";
+import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@material-ui/lab";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
+import { Link, Tooltip, Zoom, Button, Grid } from "@material-ui/core";
+
+const MyLink = ({ data }) => (
+  <Link href={data.href} key={data.href} underline="none" color="inherit">
+    <Tooltip title={data.name} placement="top" TransitionComponent={Zoom}>
+      <Button variant="text" color="inherit" aria-label={`Go to ${data.name}`}>
+        {data.name}
+      </Button>
+    </Tooltip>
+  </Link>
+);
 
 const useStyles = makeStyles((theme) => ({
   iconButton: {
     position: "absolute",
     bottom: theme.spacing(6),
     left: theme.spacing(6),
-    height: "2.5rem",
+    paddingBottom: "10px"
   },
-  icon: {
-    fontSize: "1.25rem",
+  gridButtons: {
+    position: "absolute",
+    bottom: theme.spacing(6),
+    left: theme.spacing(6),
+    width: "50%"
+  },
+  item: {
+    padding: "0 15px",
+  },
+
+  iconColor: {
+    color: theme.palette.foreground.default,
   },
 }));
 
-export const FooterText = () => {
-
+export const FooterText = ({ hidden }) => {
   const classes = useStyles();
-  const handleClickPortfolio = () => {};
-  return (
-    <Link href={"/portfolio"} key="/portfolio" underline="none" color="inherit">
-      <Tooltip title={"Portfolio"} placement="right" TransitionComponent={Zoom}>
-        <Button
-          variant="text"
-          color="inherit"
-          onClick={handleClickPortfolio}
-          aria-label={"Go to resume"}
-          className={classes.iconButton}
-        >
-          Portfolio
-        </Button>
-      </Tooltip>
-    </Link>
+  const pages = [
+    {
+      name: "Portfolio",
+      href: "/portfolio",
+      icon: <ContactPageIcon className={classes.iconColor} />,
+    },
+    {
+      name: "Projects",
+      href: "/projects",
+      icon: <BusinessCenterIcon className={classes.iconColor} />,
+    },
+  ];
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  return hidden ? (
+    <Grid
+      container
+      justifyContent="left"
+      alignItems="center"
+      direction="row"
+      className={classes.gridButtons}
+    >
+      {pages.map((data) => (
+        <Grid item className={classes.item}>
+          <MyLink data={data} />
+        </Grid>
+      ))}
+    </Grid>
+  ) : (
+  <Tooltip title={"Pages"} placement="" TransitionComponent={Zoom} className={classes.speedDial}>
+    
+      <SpeedDial
+        ariaLabel="SpeedDial"
+        hidden={false}
+        icon={<SpeedDialIcon />}
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={open}
+        direction={"up"}
+        className={classes.iconButton}
+      >
+        {pages.map((data) => (
+          <SpeedDialAction
+            key={data.name}
+            icon={data.icon}
+            tooltipTitle={data.name}
+            onClick={handleClose}
+            href={data.href}
+            sx={{ align: "center" }}
+            underline="none"
+            color="inherit"
+          />
+        ))}
+      </SpeedDial>
+    </Tooltip>
   );
 };
