@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Card from "components/projects/Card";
 import Resume from "settings/resume.json";
-import { IconButton } from "@mui/material";
-import { Typography, Tooltip, Zoom } from "@material-ui/core";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { LogoLink } from "components/logo/LogoLink";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { withRouter } from "react-router-dom";
 
@@ -56,16 +55,7 @@ const Projects = ({ history }) => {
 
   return (
     <div className={classes.container}>
-      <Tooltip title={"Back"} placement="right" TransitionComponent={Zoom}>
-        <IconButton
-          style={{ position: "absolute", top: 10, left: 10 }}
-          size="large"
-          className="back-button"
-          onClick={() => history.push("/")}
-        >
-          <ArrowBackIcon />
-        </IconButton>
-      </Tooltip>
+      <LogoLink tooltip="Back to Home" />
       <Typography variant="h4" align="center">
         Projects
       </Typography>

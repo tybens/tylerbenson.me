@@ -17,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const LogoLink = () => {
+export const LogoLink = ({ tooltip = Resume.basics.name }) => {
     const classes = useStyles();
 
     return (
         <Tooltip
-            title={Resume.basics.name}
+            title={tooltip}
             placement="right"
             TransitionComponent={Zoom}
         >

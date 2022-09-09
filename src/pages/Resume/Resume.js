@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { IconButton } from "@mui/material";
 import Slider from "rc-slider";
-import { Grid, Tooltip, Zoom } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { CSSTransition } from "react-transition-group";
+import { LogoLink } from "components/logo/LogoLink";
 import { Link, withRouter } from "react-router-dom";
 import "rc-slider/assets/index.css";
 import "./Resume.css";
@@ -12,22 +11,10 @@ import resumeData from "settings/resume.json";
 const Resume = ({ history }) => {
   const [slider, setSlider] = useState(2);
   const data = resumeData.resume;
-  const handleBackClick = () => {
-    history.push("/");
-  };
 
   return (
     <main>
-      <Tooltip title={"Back"} placement="right" TransitionComponent={Zoom}>
-        <IconButton
-          style={{ position: "absolute", top: 10, left: 10 }}
-          size="large"
-          className="back-button"
-          onClick={handleBackClick}
-        >
-          <ArrowBackIcon />
-        </IconButton>
-      </Tooltip>
+      <LogoLink tooltip="Back to Home" />
       <section id="portfolio">
         <h2 className="section-heading">some things about me</h2>
         <center>
