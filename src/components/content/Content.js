@@ -5,7 +5,7 @@ import { TextDecrypt } from "./TextDecrypt";
 import Resume from "../../settings/resume.json";
 import { FirstName } from "../../utils/getName";
 import FadeIn from "react-fade-in";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
 export const Content = () => {
   const classes = useStyles();
 
-  const history = useHistory();
+  const navigate = useNavigate();
   const handleClickImg = () => {
-    history.push("/portfolio");
+    navigate("/portfolio");
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetMeta } from "./HelmetMeta";
 import { ThemeProvider } from "components/theme/ThemeProvider";
 import { CssBaseline } from "@material-ui/core";
@@ -23,13 +23,15 @@ export const App = () => {
       <CssBaseline />
       <Router>
         <HelmetMeta />
-        <Switch>
+        <Routes>
           {paths.map(({ path, component }, id) => (
-            <Route key={id} path={path} exact>
-              <Transition>{component}</Transition>
-            </Route>
+            <Route
+              key={id}
+              path={path}
+              exact
+              element={<Transition>{component}</Transition>} />
           ))}
-        </Switch>
+        </Routes>
       </Router>
     </ThemeProvider>
   );

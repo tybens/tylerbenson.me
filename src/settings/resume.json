@@ -59,31 +59,36 @@
       {
         "hexa": "#1D1148",
         "title": "Habitat Sartorial",
-        "description": "https://www.habitatsartorial.org/",
+        "url": "https://www.habitatsartorial.org/",
+        "description": "The commerce and blog website for Habiat Sartorial. This project is built with React frontend and NodeJS backend with firebase hosting and database technologies. This my biggest project in terms of hours spent.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/habitatsartorial_tvzafl.png"
       },
       {
         "hexa": "#FFCD00",
         "title": "Chandlers Fav Album",
-        "description": "https://www.chandlersfavoritealbum.com/",
+        "url": "https://www.chandlersfavoritealbum.com/",
+        "description": "A webapp to photoshop your favorite album into Chandler's arms. It is built with React frontend, flask serverless functions for backend, and hosted with Vercel.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/chandlersfavalbum_ki75jc.png"
       },
       {
         "hexa": "#FF5041",
         "title": "Lonely Raids",
-        "description": "https://lonelyraids.com/",
+        "url": "https://lonelyraids.com/",
+        "description": "This webapp connects you and your friends to a random Twitch streamer currently streaming to zero viewers. It is built with raw HTML + jQuery frontend and firebase backend. This was one of my first substantial projects and so the story of trial and error here is long lol.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/lonelyraids_g5twam.png"
       },
       {
         "hexa": "#000000",
         "title": "Teagan Lamp",
-        "description": "https://teaganlamp.com/",
+        "url": "https://teaganlamp.com/",
+        "description": "This single page webapp allows you to control my friend Teagan's desk lamp at the click of a button. This was built with HTML + jQuery frontend and flask python backend.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/teaganlamp_ihdgos.png"
       },
       {
         "hexa": "#FFCD00",
         "title": "Leilanibender.com",
-        "description": "https://www.leilanibender.com/",
+        "url": "https://www.leilanibender.com/",
+        "description": "This project is a simple static portfolio website made in React.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png"
       }
     ]
