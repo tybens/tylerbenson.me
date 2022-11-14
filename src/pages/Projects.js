@@ -59,6 +59,9 @@ const Projects = ({ history }) => {
       <Typography variant="h4" align="center">
         Projects
       </Typography>
+      <Typography variant="body2" align="center" sx={{maxWidth: "35%"}}>
+        I find enjoyment in making random webapps, feel free to checkout some of the decisions I made and difficulties I ran into in completing these projects. 
+      </Typography>
       <Page>
         <Grid>
           {Resume.basics.projects.map((website, index) => (

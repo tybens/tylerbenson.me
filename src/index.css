@@ -21,6 +21,6 @@ body {
     transition: all 0.5s ease;
 }
 p {
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
 }

@@ -65,19 +65,19 @@ export const FooterText = ({ hidden }) => {
   return hidden ? (
     <Grid
       container
-      justifyContent="left"
+      justifyContent="flex-start"
       alignItems="center"
       direction="row"
       className={classes.gridButtons}
     >
-      {pages.map((data) => (
-        <Grid item className={classes.item}>
+      {pages.map((data, i) => (
+        <Grid item key={i} className={classes.item}>
           <MyLink data={data} />
         </Grid>
       ))}
     </Grid>
   ) : (
-  <Tooltip title={"Pages"} placement="" TransitionComponent={Zoom} className={classes.speedDial}>
+  <Tooltip title={"Pages"} TransitionComponent={Zoom} className={classes.speedDial}>
     
       <SpeedDial
         ariaLabel="SpeedDial"

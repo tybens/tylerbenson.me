@@ -8,7 +8,7 @@
           vector-effect="non-scaling-stroke"
           transform=" translate(0, 0) scale(0.60)"
           d="M -40 40 L 40 40 L 40 -40 L -40 -40"
-          stroke-linecap="round"
+          strokeLineCap="round"
         />
       </g>
       <g transform="matrix(1 0 0 1 215 200)" id="99Maz_lUxNlx8ra5Ev1Ll">
@@ -17,7 +17,7 @@
           vector-effect="non-scaling-stroke"
           transform=" translate(0, 0) scale(0.60)"
           d="M -80 -110 L -80 -190 L 0 -190 L 0 90 L 20 110 L 80 110 L 80 190 L -40 190 L -80 150 z"
-          stroke-linecap="round"
+          strokeLineCap="round"
         />
       </g>
       <path
