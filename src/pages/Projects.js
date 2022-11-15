@@ -10,6 +10,9 @@ const useStyles = makeStyles(() => ({
     minHeight: "100vh",
     padding: "10%",
   },
+  marginBottom: {
+    marginBottom: "10%",
+  }
 }));
 
 const Projects = () => {
@@ -24,7 +27,7 @@ const Projects = () => {
             Personal Projects Blog
           </Typography>
         </Grid>
-        <Grid item container justify="center" xs={12}>
+        <Grid item container justify="center" xs={12} className={classes.marginBottom}>
           <Grid item xs={12} sm={8} md={6}>
             <Typography variant="body2" align="center">
               I find enjoyment in making random webapps, feel free to checkout

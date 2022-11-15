@@ -55,8 +55,8 @@ const ProjectItem = ({ hexa, title, description, image }) => {
       <Fade bottom>
         <img src={image} alt={title} className={classes.landingImage} />
         <Typography
-          variant="h5"
-          color="primary"
+        variant="h5"
+          component="h3"
           className={classes.title}
           align="right"
         >
@@ -64,7 +64,7 @@ const ProjectItem = ({ hexa, title, description, image }) => {
         </Typography>
         <Typography
           variant="body2"
-          color="primary"
+          component="h2"
           className={classes.price}
           align="right"
         >
