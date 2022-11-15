@@ -34,7 +34,7 @@ export const Content = () => {
   };
 
   return (
-    <Container component="main" className={`${classes.main}`} maxWidth="md">
+    <Container component="main" className={`${classes.main}`} maxWidth="sm">
       <Grid container spacing={4}>
         <Grid
           item
@@ -42,6 +42,7 @@ export const Content = () => {
           sm={4}
           className={classes.img}
           onClick={handleClickImg}
+          style={{display: "none"}}
         >
           <img
             width="100%"
@@ -50,11 +51,11 @@ export const Content = () => {
             src={`${Resume.basics.photo}`}
           />
         </Grid>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12}>
           <Typography variant="h2" component="h1" gutterBottom>
             <TextDecrypt text={`${Resume.basics.x_title} ${FirstName}`} />
           </Typography>
-          <Typography variant="h5" component="h2">
+          <Typography variant="h5" component="h2" gutterButtom>
             <TextDecrypt text={`a ${Resume.basics.job}`} />
             <TextDecrypt text={`from ${Resume.basics.location.country}`} />
           </Typography>
