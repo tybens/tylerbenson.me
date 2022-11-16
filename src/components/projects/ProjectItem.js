@@ -49,7 +49,7 @@ const ProjectItem = ({ hexa, title, description, image }) => {
       xs={10}
       className={classes.landing}
       container
-      justify="center"
+      justifyContent="center"
       style={{ marginTop: Math.random() * 200 }}
     >
       <Fade bottom>
