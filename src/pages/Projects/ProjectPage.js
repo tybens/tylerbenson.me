@@ -66,8 +66,10 @@ const ProjectPage = () => {
               <p {...props} style={{ marginBlockStart: "1.25em" }} />
             ),
             a: ({ node, ...props }) => (
+              // eslint-disable-next-line
               <a {...props} target="_blank" rel="noopener noreferrer" />
             ),
+            // eslint-disable-next-line
             img: ({ node, ...props }) => <img {...props} width="100%" />,
           }}
         />
