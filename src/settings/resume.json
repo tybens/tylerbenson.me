@@ -57,6 +57,7 @@
     ],
     "projects": [
       {
+        "id": "habitat-sartorial",
         "hexa": "#1D1148",
         "title": "Habitat Sartorial",
         "url": "https://www.habitatsartorial.org/",
@@ -64,6 +65,7 @@
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/habitatsartorial_tvzafl.png"
       },
       {
+        "id": "chandlersfavalbum",
         "hexa": "#FFCD00",
         "title": "Chandlers Fav Album",
         "url": "https://www.chandlersfavoritealbum.com/",
@@ -71,6 +73,7 @@
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/chandlersfavalbum_ki75jc.png"
       },
       {
+        "id": "lonelyraids",
         "hexa": "#FF5041",
         "title": "Lonely Raids",
         "url": "https://lonelyraids.com/",
@@ -78,6 +81,7 @@
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/lonelyraids_g5twam.png"
       },
       {
+        "id": "teaganlamp",
         "hexa": "#000000",
         "title": "Teagan Lamp",
         "url": "https://teaganlamp.com/",
@@ -85,6 +89,7 @@
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/teaganlamp_ihdgos.png"
       },
       {
+        "id": "leilanibender",
         "hexa": "#FFCD00",
         "title": "Leilanibender.com",
         "url": "https://www.leilanibender.com/",

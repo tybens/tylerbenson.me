@@ -7,7 +7,7 @@ import { CssBaseline } from "@material-ui/core";
 import { logCredits } from "utils/logCredits";
 import { CSSTransition } from "react-transition-group";
 import { exit } from "utils/transition";
-import { Resume, PageNotFound, Projects, Home } from "pages";
+import { Resume, PageNotFound, Projects, ProjectPage, Home } from "pages";
 
 export const App = () => {
   logCredits();
@@ -15,6 +15,7 @@ export const App = () => {
     { path: "/", component: <Home /> },
     { path: "/portfolio", component: <Resume /> },
     { path: "/projects", component: <Projects /> },
+    { path: "/projects/:id", component: <ProjectPage /> },
     { path: "*", component: <PageNotFound /> },
   ];
 

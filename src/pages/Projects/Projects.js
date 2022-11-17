@@ -1,10 +1,20 @@
 import React from "react";
 import Resume from "settings/resume.json";
+import { useNavigate } from "react-router-dom";
 import { LogoLink } from "components/logo/LogoLink";
 import { Typography, Grid } from "@material-ui/core";
-import ProjectItem from "../components/projects/ProjectItem";
+import ProjectItem from "../../components/projects/ProjectItem";
 
 const Projects = () => {
+  const navigate = useNavigate();
+  // const linkToExternalPage = (url) => {
+  //   var link = document.createElement("a");
+  //   link.href = url;
+  //   link.target = "_blank";
+  //   link.rel = "noopener noreferrer";
+  //   document.body.appendChild(link);
+  //   link.click();
+  // };
 
   return (
     <div
@@ -39,27 +49,13 @@ const Projects = () => {
         </Grid>
         <Grid item xs={12} container>
           {Resume.basics.projects.map((website, index) => (
-            <Grid
-              item
-              key={index}
-              xs={12}
-              sm={6}
-              md={4}
-              onClick={() => {
-                var link = document.createElement("a");
-                link.href = website.url;
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                document.body.appendChild(link);
-                link.click();
-              }}
-            >
-              <ProjectItem
-                hexa={website.hexa}
-                title={website.title}
-                description={website.description}
-                image={website.image}
-              />
+            <Grid item key={index} xs={12} sm={6} md={4} onClick={() => navigate(`${website.id}`)}>
+                <ProjectItem
+                  hexa={website.hexa}
+                  title={website.title}
+                  description={website.description}
+                  image={website.image}
+                />
             </Grid>
           ))}
         </Grid>

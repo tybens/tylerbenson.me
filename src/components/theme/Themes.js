@@ -45,6 +45,9 @@ export const LightTheme = responsiveFontSizes(
             color: black,
             backgroundColor: white,
           },
+          a: {
+            color: "#00bfbf",
+          }
         },
       },
       MuiIconButton: {
