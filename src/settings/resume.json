@@ -60,7 +60,7 @@
         "id": "habitat-sartorial",
         "hexa": "#1D1148",
         "title": "Habitat Sartorial",
-        "url": "https://www.habitatsartorial.org/",
+        "url": "https://habitatsartorial.org/",
         "description": "The commerce and blog website for Habiat Sartorial. This project is built with React frontend and NodeJS backend with firebase hosting and database technologies. This my biggest project in terms of hours spent.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/habitatsartorial_tvzafl.png"
       },
