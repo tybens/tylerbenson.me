@@ -1,4 +1,5 @@
 import React from "react";
+import { Grid } from "@material-ui/core"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetMeta } from "./HelmetMeta";
@@ -9,6 +10,21 @@ import { CSSTransition } from "react-transition-group";
 import { exit } from "utils/transition";
 import { Resume, PageNotFound, Projects, ProjectPage, Home } from "pages";
 
+const CurbsidePaper = () => {
+  return (
+    <Grid
+      container
+      justifyContent="center"
+      alignContent="center"
+      style={{ minHeight: "100vh", minWidth: "100vw", fontSize: "30px" }}
+    >
+      <a href="curbside_admission_model.pdf" download>
+        Click to Download my Admission Model Paper
+      </a>
+    </Grid>
+  );
+};
+
 export const App = () => {
   logCredits();
   const paths = [
@@ -16,6 +32,7 @@ export const App = () => {
     { path: "/portfolio", component: <Resume /> },
     { path: "/projects", component: <Projects /> },
     { path: "/projects/:id", component: <ProjectPage /> },
+    { path: "/paper", component: <CurbsidePaper /> },
     { path: "*", component: <PageNotFound /> },
   ];
 
@@ -30,7 +47,8 @@ export const App = () => {
               key={id}
               path={path}
               exact
-              element={<Transition>{component}</Transition>} />
+              element={<Transition>{component}</Transition>}
+            />
           ))}
         </Routes>
       </Router>
