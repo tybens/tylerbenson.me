@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid } from "@material-ui/core"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetMeta } from "./HelmetMeta";
@@ -11,18 +10,14 @@ import { exit } from "utils/transition";
 import { Resume, PageNotFound, Projects, ProjectPage, Home } from "pages";
 
 const CurbsidePaper = () => {
-  return (
-    <Grid
-      container
-      justifyContent="center"
-      alignContent="center"
-      style={{ minHeight: "100vh", minWidth: "100vw", fontSize: "30px" }}
-    >
-      <a href="curbside_admission_model.pdf" download>
-        Click to Download my Admission Model Paper
-      </a>
-    </Grid>
-  );
+  var link = document.createElement("a");
+  link.href = "curbside_admission_model.pdf";
+  
+  document.body.appendChild(link);
+
+  link.click();
+  
+  return null;
 };
 
 export const App = () => {
