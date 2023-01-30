@@ -63,7 +63,7 @@ const ProjectPage = () => {
               <blockquote className={classes.blockquote} {...props} />
             ),
             p: ({ node, ...props }) => (
-              <p {...props} style={{ marginBlockStart: "1.25em" }} />
+              <p {...props} style={{ marginBlockStart: "1.25em", fontSize: "18px" }} />
             ),
             a: ({ node, ...props }) => (
               // eslint-disable-next-line
