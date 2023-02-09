@@ -1,7 +1,9 @@
 const projectData = {
   "habitat-sartorial": `
   # Habitat Sartorial is the biggest project I've built
-    Written 11/17/2022 
+    Project Completed ~Ongoing~ | Post Written 11/17/2022 
+
+  ![](https://github.com/tybens/sartorial/raw/main/public/images/ha317at.001.jpeg)
 
   ---
 
@@ -57,7 +59,7 @@ Ultimately, I fixed that particular problem and, with 4 additional collections, 
   - I learned that I really enjoy adding small front-end flourishes that help bring the website to life. Color changes, smooth animations during page navigation, and small touches of motion all help make [habitatsartorial.org](https://habitatsartorial.org) feel modern and new.
   `,
   chandlersfavalbum: `# A webapp to photoshop Chandler Bing holding your favorite album
-  Written 01/30/2023 
+  Project Completed: Jan 2021 | Post Written:  02/09/2023 
 
 ---
 ## Inspiration
@@ -88,9 +90,53 @@ I eventually added my own contribution through the addition of the ability to pu
 
 
   `,
-  lonelyraids: "",
-  teaganlamp: "",
-  leilanibender: "Leilani Bender's Portfolio Website",
+  lonelyraids: `# A webapp to raid lonely twitch streamers with your friends.
+    Project Completed: Dec 2020 | Post Written:  02/09/2023 
+
+
+  ![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F09%2F01-twitch-logo.jpg%3Fquality%3D82%26strip%3Dall&f=1&nofb=1&ipt=27c34196f22f95aed666c199dc4a35d77d48b2f084d70edc3fb3b0b194975590&ipo=images)
+
+
+---
+## Inspiration
+Over quarantine I found happiness through the creation of simple yet interesting web applications. Lonelyraids is among one of these. Lonelyraids.com allows you and your friends to collectively join Twitch live streamers that are currently streaming to zero viewers. 
+
+After reading some demoralized twitch streamer's lamentations on reddit threads about trying to please an audience of no one and seeing that 95% of streamers at any given time are streaming to 0-5 viewers, I wanted to create a venue which encourages viewers to make each streamer's day...
+
+![](https://res.cloudinary.com/chickennuggets/image/upload/v1675955038/PersonalWebsite/blog/Screenshot_select-area_20230209100342_xjb7ps.png)
+
+This concept is not entirely novel, and received some recognition about two years ago, but my originality stems from the 'raid' aspect. Instead of serving each user a random stream, lonelyraids.com allows users to start a 'raid'-- in which all clients are taken to the same stream for the next three minutes. This changes what would have been an augmented view count of 1 to however many people are currently using lonelyraids-- creating a more communal experience for the lonelyraiders as well as all the more visible excitement from the (no longer) lonely streamers. 
+
+## Challenges
+
+The challenges I faced were almost all a result of my inexperience! This was my ~second website and involved a lot more back-end / api interoperability that I had done before. This bumpy road was overcome through countless open tabs, 100s of blog posts, youtube tutorials, and simply jumping in head first.
+
+## Revisiting this project (Jun 4, 2021).
+
+After a year more of coding I revisited this project looking to revamp it to reduce server costs. I had built it previously written in raw HTML/CSS with a python backend server running on a linode $5/month instance. After rewriting the frontend to be ReactJS and the backend to use firebase's serverless functions, the app runs at a net $0 cost to me. 
+
+This shift was more complicated than it seems. I wanted the server to wait 60 seconds between raids so that users can join streamers together, but maintaining time-based variables on a serverless backend was seemingly impossible. However, through clever manipulation of database variables I was able to retain full desired functionality of the website.
+`,
+  teaganlamp: `# A webapp to turn off my friend teagan's desk lamp.
+    Project Completed Jan 2021 | Post Written 02/09/2023 
+
+![](https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/teaganlamp_ihdgos.png)
+
+---
+
+
+
+
+`,
+  leilanibender: `# A quick portfolio website for my girlfriend.
+    Project Completed: Feb 2022 | Post Written:  02/09/2023 
+
+![](https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png)
+
+---
+
+This project is a testament to how quickly I can design and deploy a static website. The project took my approximately 2 hours to complete. It is written in ReactJS and hosted with firebase, as are most of my quick and easy projects. 
+`,
 };
 
 export default projectData;
