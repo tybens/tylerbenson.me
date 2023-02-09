@@ -56,7 +56,38 @@ Ultimately, I fixed that particular problem and, with 4 additional collections, 
   
   - I learned that I really enjoy adding small front-end flourishes that help bring the website to life. Color changes, smooth animations during page navigation, and small touches of motion all help make [habitatsartorial.org](https://habitatsartorial.org) feel modern and new.
   `,
-  chandlersfavalbum: "",
+  chandlersfavalbum: `# A webapp to photoshop Chandler Bing holding your favorite album
+  Written 01/30/2023 
+
+---
+## Inspiration
+
+I was swept up in a random internet fad in early 2020 in which people would use [billclintonswag.com](https://billclintonswag.com) to photoshop Bill Clinton holding 4 of their favorite album covers and post it on social media. This webapp was relatively simple and I was really curious how it was built. So after some snooping onlie I came across Thomas Millar's source code on github. 
+
+What better way to understand how it was built than trying to expand upon it. That is, I wanted to make a webapp that accomplished almost exactly the same thing, but for a different photo. Particularly, for this picture of Chandler Bing from the popular T.V. show Friends.
+
+![](https://res.cloudinary.com/chickennuggets/image/upload/v1675953613/PersonalWebsite/blog/Screenshot_select-area_20230209092903_uvmywg.png)
+
+There is still a lot that I learned for a project such as this. For example:
+- I didn't know NextJS.
+- how to host the webapp -> I saw Vercel in the footer of the original website and so I figured out how to use Vercel.
+- how to manipulate the photoshop function to work for my usecase -> mostly through trial-and-error, but I still had to dissect the code to see what to change.
+- how to set up serverless functions as a backend -> Vercel also has support for serverless functions written in Python.
+
+I eventually added my own contribution through the addition of the ability to purchase a shirt with the photoshopped picture on it. This involved adding a complex modal for the user to fill out forms; however, the most complex part of this addition was working with the printful API to dynamically generate a shirt that could be purchased would automatically be printed and sent.
+
+![](https://res.cloudinary.com/chickennuggets/image/upload/v1675953613/PersonalWebsite/blog/Screenshot_select-area_20230209093416_tfm6zd.png)
+
+## What did I take away?
+
+ - I learned how to apply a more modern website building framework (NextJS) and efficiently (and cheaply) host the website using Vercel instead of managing my own instance.
+
+ - Through this project I learned how to build a "serverless" backend. 
+
+ - Working with printful API was confusing and long-winded, but it is very rewarding seeing everything come together.
+
+
+  `,
   lonelyraids: "",
   teaganlamp: "",
   leilanibender: "Leilani Bender's Portfolio Website",
