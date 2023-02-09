@@ -1,6 +1,6 @@
 const projectData = {
   "habitat-sartorial": `
-  # Habitat Sartorial is the biggest project I've built
+  # Habitat Sartorial is the biggest project I've built. [Link](https://www.habitatsartorial.org)
     Project Completed ~Ongoing~ | Post Written 11/17/2022 
 
   ![](https://github.com/tybens/sartorial/raw/main/public/images/ha317at.001.jpeg)
@@ -58,7 +58,7 @@ Ultimately, I fixed that particular problem and, with 4 additional collections, 
   
   - I learned that I really enjoy adding small front-end flourishes that help bring the website to life. Color changes, smooth animations during page navigation, and small touches of motion all help make [habitatsartorial.org](https://habitatsartorial.org) feel modern and new.
   `,
-  chandlersfavalbum: `# A webapp to photoshop Chandler Bing holding your favorite album
+  chandlersfavalbum: `# A webapp to photoshop Chandler Bing holding your favorite album. [Link](https://www.chandlersfavoritealbum.com)
   Project Completed: Jan 2021 | Post Written:  02/09/2023 
 
 ---
@@ -90,7 +90,7 @@ I eventually added my own contribution through the addition of the ability to pu
 
 
   `,
-  lonelyraids: `# A webapp to raid lonely twitch streamers with your friends.
+  lonelyraids: `# A webapp to raid lonely twitch streamers with your friends. [Link](https://www.lonelyraids.com)
     Project Completed: Dec 2020 | Post Written:  02/09/2023 
 
 
@@ -123,12 +123,13 @@ This shift was more complicated than it seems. I wanted the server to wait 60 se
 ![](https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/teaganlamp_ihdgos.png)
 
 ---
+This project was written in HTML with JQuery to query the flask python backend. It prominently features a On/Off button that switches when clicked as well as a leaderboard of which username has clicked the On/Off button the most times. 
 
-
+Unfortunately server costs has since resulted in having to take this webapp down. But I am in the process of revamping.
 
 
 `,
-  leilanibender: `# A quick portfolio website for my girlfriend.
+  leilanibender: `# A quick portfolio website for my girlfriend. [Link](https://www.leilanibender.com)
     Project Completed: Feb 2022 | Post Written:  02/09/2023 
 
 ![](https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png)
