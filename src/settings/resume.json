@@ -65,6 +65,14 @@
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/habitatsartorial_tvzafl.png"
       },
       {
+        "id": "predictinghomelessness",
+        "hexa": "#FFCD00",
+        "title": "Predicting Rates of Homelessness",
+        "url": "https://www.leilanibender.com/",
+        "description": "What factors best predict rates of homelessness in U.S. communities? - modern data science analysis into the relationship of market and climate factors to rates of homelessness. ",
+        "image": "https://raw.githubusercontent.com/tybens/predicting-homelessness/main/figures/banner.png"
+      },
+      {
         "id": "chandlersfavalbum",
         "hexa": "#FFCD00",
         "title": "Chandlers Fav Album",

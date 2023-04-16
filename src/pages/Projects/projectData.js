@@ -1,6 +1,6 @@
 const projectData = {
   "habitat-sartorial": `
-  # Habitat Sartorial is the biggest project I've built. [Link](https://www.habitatsartorial.org)
+  # [Habitat Sartorial](https://www.habitatsartorial.org) is the biggest webapp I've built. [Github](https://github.com/tybens/sartorial)
     Project Completed ~Ongoing~ | Post Written 11/17/2022 
 
   ![](https://github.com/tybens/sartorial/raw/main/public/images/ha317at.001.jpeg)
@@ -58,7 +58,29 @@ Ultimately, I fixed that particular problem and, with 4 additional collections, 
   
   - I learned that I really enjoy adding small front-end flourishes that help bring the website to life. Color changes, smooth animations during page navigation, and small touches of motion all help make [habitatsartorial.org](https://habitatsartorial.org) feel modern and new.
   `,
-  chandlersfavalbum: `# A webapp to photoshop Chandler Bing holding your favorite album. [Link](https://www.chandlersfavoritealbum.com)
+  predictinghomelessness: `# Predicting rates of homelessness with climate and market data. [Github](https://github.com/tybens/predicting-homelessness)
+    Project Completed: Dec 2022 | Post Written:  04/15/2023 
+
+![](https://raw.githubusercontent.com/tybens/predicting-homelessness/main/figures/banner.png)
+
+---
+
+The application of modern data science models allows for greater complexity in analysis of the factors that may predict homelessness. I propose that by understanding the complex relationships that rates of homelessness hold with a variety of factors through examining how machine learning models predict rates of homelessness, decisions in policy and homeless support can be made with greater confidence and effectiveness.
+
+To accomplish this, I apply:
+- hyper parameter tuned regularized linear regression models
+- TabNet (a deep neural network of tree-based algorithms) (source)
+
+Ultimately,
+- I explain 76% of the variance in rates of homelessness over the baseline linear regression's 54%.
+- TabNet's feature importances are different from the linear models, and provide interesting insights as to the complex relationships that contribute to rates of homelessness.
+  - Particularly, the features with the highest predictive power were determined to be the median home value from 2016, the 2011 share of renters, the 2011 percentage of homeowners with severe cost burden, and the rate of poverty.
+
+![](https://github.com/tybens/predicting-homelessness/blob/main/figures/top-predictor-heatmap.png)
+
+`,
+
+  chandlersfavalbum: `# [Chandlersfavoritealbum](https://www.chandlersfavoritealbum.com): A webapp to photoshop Chandler Bing holding your favorite album. [Github](https://github.com/tybens/chandlers-favorite-album)
   Project Completed: Jan 2021 | Post Written:  02/09/2023 
 
 ---
@@ -72,13 +94,26 @@ What better way to understand how it was built than trying to expand upon it. Th
 
 There is still a lot that I learned for a project such as this. For example:
 - I didn't know NextJS.
-- how to host the webapp -> I saw Vercel in the footer of the original website and so I figured out how to use Vercel.
-- how to manipulate the photoshop function to work for my usecase -> mostly through trial-and-error, but I still had to dissect the code to see what to change.
-- how to set up serverless functions as a backend -> Vercel also has support for serverless functions written in Python.
+- how to host the webapp
+  - I saw Vercel in the footer of the original website and so I figured out what that was and how to use it.
+- how to manipulate the photoshop function to work for my usecase
+  - This was mostly through trial-and-error, but I still had to dissect the code to see what to change.
+- how to set up serverless functions as a backend
+  - Vercel also has support for serverless functions written in Python.
 
-I eventually added my own contribution through the addition of the ability to purchase a shirt with the photoshopped picture on it. This involved adding a complex modal for the user to fill out forms; however, the most complex part of this addition was working with the printful API to dynamically generate a shirt that could be purchased would automatically be printed and sent.
+I eventually added the ability to purchase a shirt with the photoshopped picture on it. This involved adding a complex modal for the user to fill out forms; however, the most complex part of this addition was working with the printful API to dynamically generate a shirt that could be purchased and would automatically be printed and sent.
 
 ![](https://res.cloudinary.com/chickennuggets/image/upload/v1675953613/PersonalWebsite/blog/Screenshot_select-area_20230209093416_tfm6zd.png)
+
+## Making it into an instagram bot: [Github](https://github.com/tybens/chandlers-instagram-bot)
+
+This project was inspired also by the instagram page @chandler_holding_ur_fav_album, a page that posts only photos identical to what my site generates. This instagram page had 100k+ followers and hadn't posted in a year and so I knew there was a market want. 
+
+I began by scraping this instagram channel's comments for requests of album covers. I had one simple check to see if a comment was requesting an album cover or not. If a comment has the words \`by\` or \`-\` in them, I assumed that an instagram user was asking for "album by artist" or "album - artist" and could save the data accordingly.
+
+With this database of requests, I created 600+ photoshopped photos as well as custom captions that included the requesting instagram accounts username to tag and notify them. I then set up a python script to run daily and post exactly one post to the account. This ran for a couple months and had some posts blow up to around 1000+ likes/shares and had so many thankful comments from the original requesters.
+
+However, Instagram didn't like the script that would log in to my account on the daily to post. (I ultimately had to make a burner email account that my script would login to to obtain the dual-security code to login to Instagram). Ultimately, my account was banned and that's where the project stands.
 
 ## What did I take away?
 
@@ -90,7 +125,7 @@ I eventually added my own contribution through the addition of the ability to pu
 
 
   `,
-  lonelyraids: `# A webapp to raid lonely twitch streamers with your friends. [Link](https://www.lonelyraids.com)
+  lonelyraids: `# [Lonelyraids.com](https://www.lonelyraids.com): A webapp to raid lonely twitch streamers with your friends. [Github](https://github.com/tybens/lonelyraids-react)
     Project Completed: Dec 2020 | Post Written:  02/09/2023 
 
 
@@ -113,11 +148,11 @@ The challenges I faced were almost all a result of my inexperience! This was my 
 
 ## Revisiting this project (Jun 4, 2021).
 
-After a year more of coding I revisited this project looking to revamp it to reduce server costs. I had built it previously written in raw HTML/CSS with a python backend server running on a linode $5/month instance. After rewriting the frontend to be ReactJS and the backend to use firebase's serverless functions, the app runs at a net $0 cost to me. 
+After a year more of coding I revisited this project looking to revamp it to reduce server costs. I had built it previously written in raw HTML/CSS with a python backend server running on a linode $5/month instance (the legacy github code can be found [here](https://github.com/tybens/lonelyraids.com)). After rewriting the frontend to be ReactJS and the backend to use firebase's serverless functions, the app runs at a net $0 cost to me. 
 
 This shift was more complicated than it seems. I wanted the server to wait 60 seconds between raids so that users can join streamers together, but maintaining time-based variables on a serverless backend was seemingly impossible. However, through clever manipulation of database variables I was able to retain full desired functionality of the website.
 `,
-  teaganlamp: `# A webapp to turn off my friend teagan's desk lamp.
+  teaganlamp: `# [teaganlamp.com](https://teaganlamp.com/): A webapp to turn off my friend teagan's desk lamp. [Github](https://github.com/tybens/teaganlamp.com)
     Project Completed Jan 2021 | Post Written 02/09/2023 
 
 ![](https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/teaganlamp_ihdgos.png)
@@ -125,11 +160,15 @@ This shift was more complicated than it seems. I wanted the server to wait 60 se
 ---
 This project was written in HTML with JQuery to query the flask python backend. It prominently features a On/Off button that switches when clicked as well as a leaderboard of which username has clicked the On/Off button the most times. 
 
-Unfortunately server costs has since resulted in having to take this webapp down. But I am in the process of revamping.
+This project did at one point actually turn off my buddy Teagan's desk lamp. However, due to the annoyance of it he has since disconnected this functionality. As it stands this site is a simple 'cookie clicker'-esque public leaderboard.
+
+## Why this project stands out:
+- It is hosted on a small linode server. That is, an nginx server is configured to expose the flask app to public domain. This took a while to figure out and was kind of annoying, which is why I now use firebase for hosting.
+
 
 
 `,
-  leilanibender: `# A quick portfolio website for my girlfriend. [Link](https://www.leilanibender.com)
+  leilanibender: `# [Leilanibender.com](https://leilanibender.web.app/): A quick portfolio website for my girlfriend. [Github](https://github.com/tybens/leilanibender.com)
     Project Completed: Feb 2022 | Post Written:  02/09/2023 
 
 ![](https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png)
