@@ -15,6 +15,7 @@ const Projects = () => {
   //   document.body.appendChild(link);
   //   link.click();
   // };
+  const local = window.location.href.includes("localhost")
 
   return (
     <div
@@ -49,6 +50,16 @@ const Projects = () => {
         </Grid>
         <Grid item xs={12} container>
           {Resume.basics.projects.map((website, index) => (
+            <Grid item key={index} xs={12} sm={6} md={4} onClick={() => navigate(`${website.id}`)}>
+                <ProjectItem
+                  hexa={website.hexa}
+                  title={website.title}
+                  description={website.description}
+                  image={website.image}
+                />
+            </Grid>
+          ))}
+          {local && Resume.basics["wip-projects"].map((website, index) => (
             <Grid item key={index} xs={12} sm={6} md={4} onClick={() => navigate(`${website.id}`)}>
                 <ProjectItem
                   hexa={website.hexa}
