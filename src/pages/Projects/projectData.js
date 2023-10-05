@@ -7,57 +7,52 @@ const projectData = {
 
   ---
 
-## The pitch
-  I was approached by my good friend [Payne Vogtman](https://www.linkedin.com/in/pvogtman/) to make a website for a nonprofit he was starting for $250 dollars. He wanted commerce functionality so that he could sell clothes on the website (the nonprofit's business model) as well as a blog in order to keep the followers aligned with the company vision. 
-  
-  Honestly $250 was quite the undershoot for what he was asking for. So I told him that I would do it for free if I could join as one of the founders and members of the board. To which he agreed!
+  ## A Golden Opportunity with a Price Tag
 
-  This happened in March of 2021. A summer later of coding marked the first collections "drop". We released the [Lookbook for Fall/Winter 2021 Classics](https://habitatsartorial.org/content/fw21-classics-lookbook) to drive excitement before dropping the [shop](https://habitatsartorial.org/shop/collections/fw21-classics) that allowed customers to purchase the designs. What that means is that I had to finish coding the blog and shop in a single summer.  
-
-  This project was a stretch for me initially. I had experience coding in React for Curbside Health but had only ever setup backends either as a continuously running server in Python Flask or as serverless functions with NextJS in Python.
+  When Payne Vogtman, a dear friend and visionary entrepreneur, approached me with an idea, I was intrigued. He was spearheading a nonprofit initiative that revolved around selling clothes - a business model I hadn't dabbled in before. With a budget of just $250, he envisioned a website with e-commerce capabilities and a blog to narrate the company's journey. The figure he quoted was notably on the lower side for such an endeavor, but the promise of the project was hard to ignore.
   
-  ## Coding It Up
+  Seeing the potential and understanding the constraints, I made a counteroffer: "Why not let me join as a co-founder and board member, and I'll waive the fee?" Payne agreed, and our partnership was sealed.
   
-  I was still beginning in my career of Javascript and React, and so to get started I followed [this tutorial](https://www.youtube.com/watch?v=377AQ0y6LPA) which brought Habitat Sartorial's website to become simply a one-page app that list random products:
+  ## A Summer to Remember
   
-  ![title](https://res.cloudinary.com/chickennuggets/image/upload/v1668696462/PersonalWebsite/commerce_tutorial_dd0y0w.png)
+  March 2021 marked the beginning of our collaboration. Fast forward to the summer, and the excitement was palpable as we geared up for our first collection "drop". We teased our audience with the [Fall/Winter 2021 Classics Lookbook](https://habitatsartorial.org/content/fw21-classics-lookbook) before unveiling the [shop](https://habitatsartorial.org/shop/collections/fw21-classics), a culmination of countless coding hours. The challenge? I had a single summer to develop the blog and shop.
   
-  However, the tutorial used a backend wrapper to commerce websites called \`CommerceJS\` which would take 3% of all sales. I didn't want to lose this 3%. And taking a look at the code it seemed I may be able to replace the API wrapper with internal ReactJS logic. Thus I was able to replace \`CommerceJS\` with the free firebase technologies.
+  The task was daunting. While I had previously tinkered with React for Curbside Health, my backend experience was limited to Python Flask and serverless functions with NextJS in Python.
   
-  For a quick example, a snippet that adds a new user's email to our database. Written as a serverless firebase function.
-  ~~~javascript
-// join the email list
-exports.emailListJoin = functions.https.onRequest(async (req, res) => {
-    // Grab the order data (may be in req.query...)
-    const email = req.body.email;
-    // Push the new message into Firestore using the Firebase Admin SDK.
-    const writeResult = db.collection("emails").add({
-      email: {
-        email,
-        joined: admin.firestore.Timestamp.now(),
-        how: "email list box",
-      },
+  ## From Novice to Navigator
+  
+  My initial foray into Habitat Sartorial's website was influenced by a [tutorial](https://www.youtube.com/watch?v=377AQ0y6LPA). This guide led to a rudimentary one-page app listing random products. Interestingly, it relied on \`CommerceJS\`, an API wrapper that levied a 3% sales fee. As an entrepreneur, every percentage mattered, and I was convinced that this could be bypassed. My solution? Replace \`CommerceJS\` with free Firebase technologies, seamlessly integrating them into the existing ReactJS setup.
+  
+  For instance, adding a user's email to our database now involved a serverless Firebase function:
+  
+~~~javascript
+  exports.emailListJoin = functions.https.onRequest(async (req, res) => {
+      const email = req.body.email;
+      const writeResult = db.collection("emails").add({
+        email: {
+          email,
+          joined: admin.firestore.Timestamp.now(),
+          how: "email list box",
+        },
+      });
+      res.json({ result: \`Email: \${writeResult} added to email list.\` });
     });
-    // Send back a message that we've successfully written the message
-    res.json({ result: \`Email: \${writeResult} added to email list.\` });
   });
-});
 ~~~
-## One more anecdote of something that went wrong.
 
-Everything was going smoothly until the night before our first collections "drop". We were opening the website up to allow purchases of our content, and so I needed the site to be bug-free. Unfortunately, however, too many problems kept popping up. I ended up pulling an all-nighter working through them, making 25+ commits and each "bug-fix" uncovering yet another bug to fix. 
+## The Night Before The Drop
 
 I breathed a sigh of relief when I pushed the commit with the message "Woohoo, expose collections to everyone!". However, our first customer sent me a text saying their cart had a NaN total price. :(. And so I began an even more frantic sprint of bug-fixing inspired now by the fear that I was potentially losing customers.
 
-Ultimately, I fixed that particular problem and, with 4 additional collections, independent contracting, and one sponsored concert in downtown Indianapolis, since that time have generated $10,000+ in sales. 
-  ## What did I take away from this?
+But determination prevailed. Post this frenzied episode, our endeavors bore fruit - over time, we amassed $10,000+ in sales through multiple collections, gigs, and partnerships.
 
-  - I realized that finding ways around helpful APIs that ask for money is possible, and that it may take a considerable amount of work for someone who was just starting out. 
+## Reflections from My Journey
 
-  - I learned the hard way that even if it feels like you only have one more functionality to implement, the "final touches" of ironing out the bugs in the system will take a discouragingly long time.
-  
-  - I learned that I really enjoy adding small front-end flourishes that help bring the website to life. Color changes, smooth animations during page navigation, and small touches of motion all help make [habitatsartorial.org](https://habitatsartorial.org) feel modern and new.
-  `,
+Three key takeaways from this endeavor:
+  1. **Innovation Over Investment:** While helpful APIs can ease the process, there's always a way to bypass their costs, albeit with more work.
+  2. **Expect the Unexpected:** No matter how close you feel to the finish line, finalizing your code presents challenges that will demand more time and patience than expeceted.
+  3. **The Devil's in the Details:** It's the minute front-end flourishes that amplify user experience. Color transitions, fluid animations, and interactive elements transformed habitatsartorial.org into a contemporary haven.`,
+
   predictinghomelessness: `# Predicting rates of homelessness with climate and market data. [Github](https://github.com/tybens/predicting-homelessness)
     Project Completed: Dec 2022 | Post Written:  04/15/2023 
 
@@ -65,16 +60,17 @@ Ultimately, I fixed that particular problem and, with 4 additional collections, 
 
 ---
 
-The application of modern data science models allows for greater complexity in analysis of the factors that may predict homelessness. I propose that by understanding the complex relationships that rates of homelessness hold with a variety of factors through examining how machine learning models predict rates of homelessness, decisions in policy and homeless support can be made with greater confidence and effectiveness.
+In recent years, society has seen an ever-growing concern about homelessness. While numerous studies have been conducted to understand its causes, the ever-changing dynamics of modern society means many factors intersect and influence the rates of homelessness. However, with the emergence of advanced data science models, we now have tools at our disposal that can unravel the complex relationship between these variables and the rates of homelessness.
 
-To accomplish this, I apply:
-- hyper parameter tuned regularized linear regression models
-- TabNet (a deep neural network of tree-based algorithms) (source)
+With this in mind, I embarked on a mission: to not only apply modern machine learning techniques to predict homelessness rates but to use these predictions as a compass to guide policy and support decisions. The objective was clear - to gain a deeper understanding of the factors influencing homelessness and offer more effective solutions.
 
-Ultimately,
-- I explain 76% of the variance in rates of homelessness over the baseline linear regression's 54%.
-- TabNet's feature importances are different from the linear models, and provide interesting insights as to the complex relationships that contribute to rates of homelessness.
-  - Particularly, the features with the highest predictive power were determined to be the median home value from 2016, the 2011 share of renters, the 2011 percentage of homeowners with severe cost burden, and the rate of poverty.
+I opted for two advanced analytical approaches:
+1. A regularized linear regression model, which I fine-tuned using hyperparameter tuning techniques.
+2. TabNet, a state-of-the-art deep learning approach that combines the best of tree-based algorithms and neural networks. (source provided)
+
+The findings were illuminating. The tuned regularized linear regression model accounted for 76% of the variance in rates of homelessness, a significant improvement over the baseline linear regression's 54%. Even more intriguing was the TabNet model. It highlighted feature importances distinct from the linear models, unveiling some unexpected insights. The top predictors turned out to be the median home value from 2016, the 2011 share of renters, the 2011 percentage of homeowners burdened with severe costs, and the rate of poverty.
+
+To illustrate this, the top predictor is shown as a heatmap over the US. Consider the communities that are highlighted in this heatmap in comparison to understood rates of homelessness.
 
 ![](https://github.com/tybens/predicting-homelessness/blob/main/figures/top-predictor-heatmap.png)
 
@@ -122,17 +118,31 @@ This project was inspired also by the instagram page @chandler_holding_ur_fav_al
 
 I began by scraping this instagram channel's comments for requests of album covers. I had one simple check to see if a comment was requesting an album cover or not. If a comment has the words \`by\` or \`-\` in them, I assumed that an instagram user was asking for "album by artist" or "album - artist" and could save the data accordingly.
 
-With this database of requests, I created 600+ photoshopped photos as well as custom captions that included the requesting instagram accounts username to tag and notify them. I then set up a python script to run daily and post exactly one post to the account. This ran for a couple months and had some posts blow up to around 1000+ likes/shares and had so many thankful comments from the original requesters.
+With this database of requests, I created 600+ photoshopped photos as well as custom captions that included the requesting instagram accounts username to tag and notify them. In the code below, I search duckduckgo for the artist's instagram handle and wikipedia for a brief summary of the album to append to the caption.
+~~~python
+try:
+    summary = wikipedia.summary(album + f" ({artist} album)", sentences=2)
+except:
+    summary = ""
+thisSearch = search(artist + " Instagram")[0]
+handle = thisSearch.split("/")[-2] if "instagram" in thisSearch else ""
+artist_nospace = artist.replace(" ", "")
+caption = f"{album} by {artist} as requested by {username} \\n - \\n" + summary + \n
+          f" \\n - \\n@{handle} @friends #{artist_nospace} #photoshop #record #album #chandlerholdingurfavalbum #chandler{artist_nospace}"
+
+data.append({"caption": caption, "path_to_pic": path, "artist_handle": handle, "date_posted": date_posted })
+print(f"{posts} generated album: {album} \\t thanks to username: {username}\\t date: {date_posted}\\t path: {path}")
+~~~
+
+I then set up a python script to post exactly one post to the account daily. This ran for a couple months, had some posts blow up to around 1000+ likes/shares, and had **so** many thankful comments from the original requesters.
 
 However, Instagram didn't like the script that would log in to my account on the daily to post. (I ultimately had to make a burner email account that my script would login to to obtain the dual-security code to login to Instagram). Ultimately, my account was banned and that's where the project stands.
-
-## What did I take away?
 
  - I learned how to apply a more modern website building framework (NextJS) and efficiently (and cheaply) host the website using Vercel instead of managing my own instance.
 
  - Through this project I learned how to build a "serverless" backend. 
 
- - Working with printful API was confusing and long-winded, but it is very rewarding seeing everything come together.
+ - Working with printful API was confusing and long-winded, but it is very rewarding seeing everything come together: a single click of a button generates a photoshopped photo, puts it on a shirt, and allows purchase of said shirt.
 
 
   `,

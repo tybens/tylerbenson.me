@@ -118,7 +118,7 @@
         "id": "leilanibender",
         "hexa": "#FFCD00",
         "title": "Leilanibender.com",
-        "url": "https://www.leilanibender.com/",
+        "url": "https://leilanibender.web.app/",
         "description": "This project is a simple static portfolio website made in React.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png"
       }
@@ -126,6 +126,23 @@
   },
   "resume": {
     "experience": [
+      {
+      "thing": "IBM",
+      "description": "Returning Data Scientist",
+      "date": "May - August 2023",
+      "toggle": [1, 2, 3, 4, 5],
+      "points": [
+        {
+          "toggle": [1, 2, 3, 4, 5],
+          "content": "Developed proof of concepts products using ReactJS + Python for the cutting edge LLM product WatsonX."
+        },
+
+        {
+          "toggle": [1, 2, 3, 4, 5],
+          "content": "Fine-tuned Meta's Llama-2 to use in our novel RAG architecture, creating a LLM powered Q&A suite for IBM products."
+        }
+      ]
+    },
       {
         "thing": "IBM",
         "description": "Data Scientist",

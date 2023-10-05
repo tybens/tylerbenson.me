@@ -26,16 +26,15 @@ export const LightTheme = responsiveFontSizes(
     typography: {
       fontSize: 16,
       htmlFontSize: 16,
+      fontFamily: 'Futura, Trebuchet MS, Arial, sans-serif',
       h2: {
         fontWeight: 500,
       },
       h5: {
         fontWeight: 500,
-        fontFamily: 'Roboto Mono, monospace',
       },
       body1: {
         fontWeight: 500,
-        fontFamily: 'Roboto Mono, monospace',
       },
     },
     overrides: {
@@ -91,7 +90,6 @@ export const LightTheme = responsiveFontSizes(
       },
       MuiTooltip: {
         tooltip: {
-          fontFamily: 'Roboto Mono, monospace',
           backgroundColor: primary,
           color: black,
           fontSize: 11,
@@ -121,16 +119,15 @@ export const DarkTheme = responsiveFontSizes(
     typography: {
       fontSize: 16,
       htmlFontSize: 16,
+      fontFamily: 'Futura, Trebuchet MS, Arial, sans-serif',
       h2: {
         fontWeight: 500,
       },
       h5: {
         fontWeight: 500,
-        fontFamily: 'Roboto Mono, monospace',
       },
       body1: {
         fontWeight: 500,
-        fontFamily: 'Roboto Mono, monospace',
       },
     },
     overrides: {
@@ -183,7 +180,6 @@ export const DarkTheme = responsiveFontSizes(
       },
       MuiTooltip: {
         tooltip: {
-          fontFamily: 'Roboto Mono, monospace',
           backgroundColor: primary,
           color: white,
           fontSize: 11,
