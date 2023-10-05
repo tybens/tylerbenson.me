@@ -7,23 +7,24 @@ const projectData = {
 
   ---
 
-  ## A Golden Opportunity with a Price Tag
+## The Pitch
+I was approached by my good friend [Payne Vogtman](https://www.linkedin.com/in/pvogtman/) to make a website for a nonprofit he was starting for $250 dollars. He wanted commerce functionality so that he could sell clothes on the website (the nonprofit's business model) as well as a blog in order to keep the followers aligned with the company vision. 
 
-  When Payne Vogtman, a dear friend and visionary entrepreneur, approached me with an idea, I was intrigued. He was spearheading a nonprofit initiative that revolved around selling clothes - a business model I hadn't dabbled in before. With a budget of just $250, he envisioned a website with e-commerce capabilities and a blog to narrate the company's journey. The figure he quoted was notably on the lower side for such an endeavor, but the promise of the project was hard to ignore.
+Honestly $250 was quite the undershoot for what he was asking for. So I told him that I would do it for free if I could join as one of the founders and members of the board. To which he agreed!
+
+This happened in March of 2021. A summer later of coding marked the first collections "drop". We released the [Lookbook for Fall/Winter 2021 Classics](https://habitatsartorial.org/content/fw21-classics-lookbook) to drive excitement before dropping the [shop](https://habitatsartorial.org/shop/collections/fw21-classics) that allowed customers to purchase the designs. What that means is that I had to finish coding the blog and shop in a single summer.  
+
+This project was a stretch for me initially. I had experience coding in React for Curbside Health but had only ever setup backends either as a continuously running server in Python Flask or as serverless functions with NextJS in Python.
+
+## Coding It Up
   
-  Seeing the potential and understanding the constraints, I made a counteroffer: "Why not let me join as a co-founder and board member, and I'll waive the fee?" Payne agreed, and our partnership was sealed.
+I was still beginning in my career of Javascript and React, and so to get started I followed [this tutorial](https://www.youtube.com/watch?v=377AQ0y6LPA) which brought Habitat Sartorial's website to become simply a one-page app that listed random products:
   
-  ## A Summer to Remember
+![title](https://res.cloudinary.com/chickennuggets/image/upload/v1668696462/PersonalWebsite/commerce_tutorial_dd0y0w.png)
   
-  March 2021 marked the beginning of our collaboration. Fast forward to the summer, and the excitement was palpable as we geared up for our first collection "drop". We teased our audience with the [Fall/Winter 2021 Classics Lookbook](https://habitatsartorial.org/content/fw21-classics-lookbook) before unveiling the [shop](https://habitatsartorial.org/shop/collections/fw21-classics), a culmination of countless coding hours. The challenge? I had a single summer to develop the blog and shop.
+However, the tutorial used a backend wrapper to commerce websites called \`CommerceJS\` which would take 3% of all sales. I didn't want to lose this 3%. And taking a look at the code it seemed I may be able to replace the API wrapper with internal ReactJS logic. Thus I was able to replace \`CommerceJS\` with the free firebase technologies.
   
-  The task was daunting. While I had previously tinkered with React for Curbside Health, my backend experience was limited to Python Flask and serverless functions with NextJS in Python.
-  
-  ## From Novice to Navigator
-  
-  My initial foray into Habitat Sartorial's website was influenced by a [tutorial](https://www.youtube.com/watch?v=377AQ0y6LPA). This guide led to a rudimentary one-page app listing random products. Interestingly, it relied on \`CommerceJS\`, an API wrapper that levied a 3% sales fee. As an entrepreneur, every percentage mattered, and I was convinced that this could be bypassed. My solution? Replace \`CommerceJS\` with free Firebase technologies, seamlessly integrating them into the existing ReactJS setup.
-  
-  For instance, adding a user's email to our database now involved a serverless Firebase function:
+For instance, adding a user's email to our database now involved a serverless Firebase function:
   
 ~~~javascript
   exports.emailListJoin = functions.https.onRequest(async (req, res) => {
@@ -42,9 +43,11 @@ const projectData = {
 
 ## The Night Before The Drop
 
+I ended up pulling an all-nighter working through all of the bugs that popped up in the moments before exposing the collections, making 25+ commits and each "bug-fix" uncovering yet more bugs to fix. 
+
 I breathed a sigh of relief when I pushed the commit with the message "Woohoo, expose collections to everyone!". However, our first customer sent me a text saying their cart had a NaN total price. :(. And so I began an even more frantic sprint of bug-fixing inspired now by the fear that I was potentially losing customers.
 
-But determination prevailed. Post this frenzied episode, our endeavors bore fruit - over time, we amassed $10,000+ in sales through multiple collections, gigs, and partnerships.
+Ultimately, I fixed that particular problem and, with 4 additional collections, independent contracting, and one sponsored concert in downtown Indianapolis, since that time have generated $10,000+ in sales. 
 
 ## Reflections from My Journey
 
@@ -70,9 +73,10 @@ I opted for two advanced analytical approaches:
 
 The findings were illuminating. The tuned regularized linear regression model accounted for 76% of the variance in rates of homelessness, a significant improvement over the baseline linear regression's 54%. Even more intriguing was the TabNet model. It highlighted feature importances distinct from the linear models, unveiling some unexpected insights. The top predictors turned out to be the median home value from 2016, the 2011 share of renters, the 2011 percentage of homeowners burdened with severe costs, and the rate of poverty.
 
+![title](https://raw.githubusercontent.com/tybens/predicting-homelessness/main/figures/top-predictor-heatmap.png)
+
 To illustrate this, the top predictor is shown as a heatmap over the US. Consider the communities that are highlighted in this heatmap in comparison to understood rates of homelessness.
 
-![](https://github.com/tybens/predicting-homelessness/blob/main/figures/top-predictor-heatmap.png)
 
 `,
 spacetiger: `# [SpaceTiger](https://spacetiger.tigerapps.org): Like yelp but for unofficial spaces on college campuses [Github](https://github.com/tybens/spacetiger)
@@ -172,6 +176,35 @@ The challenges I faced were almost all a result of my inexperience! This was my 
 After a year more of coding I revisited this project looking to revamp it to reduce server costs. I had built it previously written in raw HTML/CSS with a python backend server running on a linode $5/month instance (the legacy github code can be found [here](https://github.com/tybens/lonelyraids.com)). After rewriting the frontend to be ReactJS and the backend to use firebase's serverless functions, the app runs at a net $0 cost to me. 
 
 This shift was more complicated than it seems. I wanted the server to wait 60 seconds between raids so that users can join streamers together, but maintaining time-based variables on a serverless backend was seemingly impossible. However, through clever manipulation of database variables I was able to retain full desired functionality of the website.
+
+let's take a look at how I manage checking if the database is currently performing a raid. I first get the stream data from our database and subtract the current time from when it was added.
+~~~javascript
+const currentStream = await readStreamData();
+secondsSince = firebase.firestore.Timestamp.now()._seconds - currentStream.added._seconds;
+pagination_offset = currentStream.pagination_offset;
+~~~
+
+Then I check if this time is greater than a minute. If it is I fetch a new streamer and update the database, otherwise I serve that streamer.
+
+~~~javascript
+let raidJoined = false;
+if (secondsSince > 60) {
+  // if the stream is older than a certain time, find a new one (starting at the pagination offset ?)
+  data = await populate_streamers(CLIENT_ID, CLIENT_SECRET, pagination_offset );
+  streamName = data.user
+  writeStreamData(streamName, data.pagination_offset);
+  console.log(
+    \`Raid started! Stream with username: \${streamName} added to db\`
+  );
+  secondsSince = 0
+} else {
+  // else, serve the saved one
+  streamName = currentStream.streamName;
+  raidJoined = true;
+}
+~~~
+
+
 `,
   teaganlamp: `# [teaganlamp.com](https://teaganlamp.com/): A webapp to turn off my friend teagan's desk lamp. [Github](https://github.com/tybens/teaganlamp.com)
     Project Completed Jan 2021 | Post Written 02/09/2023 
@@ -184,8 +217,49 @@ This project was written in HTML with JQuery to query the flask python backend. 
 This project did at one point actually turn off my buddy Teagan's desk lamp. However, due to the annoyance of it he has since disconnected this functionality. As it stands this site is a simple 'cookie clicker'-esque public leaderboard.
 
 ## Why this project stands out:
-- It is hosted on a small linode server. That is, an nginx server is configured to expose the flask app to public domain. This took a while to figure out and was kind of annoying, which is why I now use firebase for hosting.
+It is hosted on a small linode server. That is, an nginx server is configured to expose the flask app to public domain. This took a while to figure out and was kind of annoying, which is why I now use firebase for hosting.
 
+As an example of my learning process for hosting it on a linode server, take a look at the [Deploying](https://github.com/tybens/teaganlamp.com#deploying) section of the readme:
+~~~bash
+cd /srv # wherever we want the app to be
+sudo git clone https://github.com/tybens/teaganlamp.com.git
+cd teaganlamp.com
+sudo apt-get update
+sudo apt install python3-pip python3-dev python3-venvk
+python3 -m venv venv
+source venv/bin/activate
+sudo pip3 install -r requirements.txt
+
+# static files setup
+sudo mkdir /var/www/teaganlamp.com
+sudo chmod 755 /var/www/teaganlamp.com
+sudo ln -s /srv/teaganlamp.com/static /var/www/teaganlamp.com/html
+
+# nginx config
+sudo mv etc/nginx-teaganlamp /etc/nginx/sites-available/nginx-teaganlamp
+sudo ln -s /etc/nginx/sites-available/nginx-teaganlamp /etc/nginx/sites-enabled/
+sudo systemctl restart nginx
+sudo ufw allow 'Nginx Full'  # not sure if this is necessary (the article said it was)
+
+# redis setup 
+sudo wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+sudo make install
+
+# supervisor setup
+mkdir /var/log/teaganlamp.com  # where the errors are logged
+sudo mv etc/supervisor_services.conf /etc/supervisord.conf
+sudo supervisord -c /etc/supervisord.conf  # starts supervisord services
+	# to restart just the gunicorn: supervisorctl restart gunicorn
+
+# set up certbot (for https:// ssl verification)
+sudo snap install core
+sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+sudo certbot --nginx
+~~~
 
 
 `,
