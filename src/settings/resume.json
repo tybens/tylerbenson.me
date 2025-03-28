@@ -1,22 +1,22 @@
 {
   "basics": {
     "name": "Tyler Benson",
-    "label": "Computer Science student",
+    "label": "SWE",
     "email": "tylersmilerb@gmail.com",
     "phone": "(XXX) XXX-XXXX",
     "picture": "jl.png",
     "x_title": "Hey, I'm",
-    "job": "Senior at Princeton University",
-    "description": "Hey, I'm Tyler Benson, a Computer Science student at Princeton passionate about data and AI. Talk soon!",
-    "summary": "based in San Diego, California.",
+    "job": "SWE at Kikoff",
+    "description": "Hey, I'm Tyler Benson, a software engineer and all-around standup guy.",
+    "summary": "based in San Francisco, California.",
     "keywords": "personal,website,portfolio,template,kit,tybens,tyler,benson,ty,bens,computer,science,bremen,germany,react,github,linkedin,google,gitlab,telegram,material,design,ui,webapp",
     "url": "https://tylerbenson.me",
     "photo": "https://res.cloudinary.com/chickennuggets/image/upload/v1668451883/PersonalWebsite/climbing_selfie_c1pjlf.jpg",
-    "about": "I'm passionate about data science, building random webapps, and climbing! While I'm not coding or climbing I enjoy playing the double bass, surfing, singing, and sleeping",
+    "about": "I'm passionate about data science, building random webapps, and climbing! While I'm not coding or climbing I enjoy playing the double bass, volleyball, singing, and sleeping",
     "location": {
       "address": "XX XXXXXstreet",
       "postalCode": "XXXXX",
-      "city": "San Diego",
+      "city": "San Francisco",
       "country": "the US",
       "countryCode": "USA",
       "region": "California"
@@ -60,7 +60,7 @@
         "id": "spacetiger",
         "hexa": "#FFCD00",
         "title": "SpaceTiger",
-        "url": "https://spacetiger.tigerapps.org/",
+        "url": "https://github.com/tybens/SpaceTiger",
         "description": "Yelp for study spots on college campuses. A three-tiered entire semester project where I acted as team lead of our 5 engineers. My first experience as a Project Manager."
       , "image": "https://camo.githubusercontent.com/eba53c0826de43191abebc087c8d872ea010ef39cc05f7a9bb0abab0d6aa0bff/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f636869636b656e6e7567676574732f696d6167652f75706c6f61642f76313637353038373136362f506572736f6e616c576562736974652f74696765725f6f73667869682e77656270"
       },
@@ -75,7 +75,7 @@
       {
         "id": "leilanibender",
         "hexa": "#FFCD00",
-        "title": "Leilanibender.com",
+        "title": "https://leilanibender.web.app/",
         "url": "https://leilanibender.web.app/",
         "description": "This project is a simple static portfolio website made in React.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/leilanibender_m2syth.png"
@@ -110,7 +110,7 @@
         "id": "lonelyraids",
         "hexa": "#FF5041",
         "title": "Lonely Raids",
-        "url": "https://lonelyraids.com/",
+        "url": "https://github.com/tybens/lonelyraids-react",
         "description": "This webapp connects you and your friends to a random Twitch streamer currently streaming to zero viewers. It is built with raw HTML + jQuery frontend and firebase backend. This was one of my first substantial projects and so the story of trial and error here is long lol.",
         "image": "https://res.cloudinary.com/chickennuggets/image/upload/v1661887581/PersonalWebsite/lonelyraids_g5twam.png"
       },
